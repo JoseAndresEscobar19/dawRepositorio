@@ -1,0 +1,32 @@
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css?family=Baloo');
+
+.container{
+	position: relative;
+	height: 100%;
+}
+
+.caja{
+	width: 120px;
+	height: 120px;
+	border: 2px solid #606060;
+	margin: auto auto 15px auto;
+	border-radius: 10px;
+	 
+}
+
+.texto{
+	font-size: 36px;
+	font-family: Baloo;
+  	vertical-align: middle; 
+  	text-align: center; 
+	
+}
+
+.colorB{
+	background-color:  #f7fade;
+}
+
+.colorG{
+	background-color: #dfedd6;
+}
