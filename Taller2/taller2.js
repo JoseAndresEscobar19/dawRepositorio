@@ -1,7 +1,6 @@
 // JavaScript Document
 function agregarNuevo(autor,contenido,link,fecha){
 	"use strict";
-	console.log(link);
 	var author = $("<h5/>", {
 	"class": "card-title",
 	html: autor+" dijo: "
@@ -12,10 +11,12 @@ function agregarNuevo(autor,contenido,link,fecha){
 	html: contenido
 	});
 
-	var url=$("<a/>",{
-		"href":link,
-		html: "https://twitter.com/"+link.split("/").pop(),
-		"class": "card-text"
+	var url=$("<p/>",{
+		"class":"card-text",
+		html:$("<a/>",{
+			"href":link,
+			html: link,
+		})
 	});
 	
 	
@@ -25,7 +26,7 @@ function agregarNuevo(autor,contenido,link,fecha){
 	});
 	
 	var divtext = $("<div/>", {
-		"class": "col-10 col-md-11"
+		"class": "car-body"
 	});
 	
 	var divimg=$("<div/>",{
@@ -37,7 +38,7 @@ function agregarNuevo(autor,contenido,link,fecha){
 	});
 	
 	var div=$("<div/>",{
-		"class":"card-body shadow row"
+		"class":"card mb-3 p-3 shadow row"
 	});
 	
 	//gg.appendTo(url);
