@@ -1,14 +1,39 @@
 // JavaScript Document
 function agregarNuevo(autor,contenido,link,fecha){
 	"use strict";
+		
+	var divrow=$("<div/>",{
+		"class":"row mb-3 shadow rounded"
+	});
+	
+	var divtext=$("<div/>",{
+		"class":"col-10 col-lg-11"
+	});
+	
+	var divimg=$("<div/>",{
+		"class": "col-2 col-lg-1",
+	});
+	
+	var cardT=$("<div/>",{
+		"class":"card border-white"	
+	});
+	
+	var cardI=$("<div/>",{
+		"class":"card border-white"	
+	});
+	
+	var divbody = $("<div/>", {
+		"class": "card-body"
+	});
+	
 	var author = $("<h5/>", {
-	"class": "card-title",
-	html: autor+" dijo: "
+		"class":"card-text",
+		html: autor+" dijo: "
 	});
 
 	var cont = $("<p/>", {
-	"class": "card-text",
-	html: contenido
+		"class":"card-text",
+		html: contenido
 	});
 
 	var url=$("<p/>",{
@@ -21,35 +46,28 @@ function agregarNuevo(autor,contenido,link,fecha){
 	
 	
 	var date=$("<p/>",{
-		"class":"text-right",
+		"class":"text-right card-text",
 		html:fecha	
 	});
 	
-	var divtext = $("<div/>", {
-		"class": "car-body"
+	var img=$("<img/>",{
+		"class":"img-fluid",
+		"src":"http://icons-for-free.com/free-icons/png/512/174528.png"
 	});
 	
-	var divimg=$("<div/>",{
-		"class": "col-2 col-md-1",
-		html:$("<img/>",{
-			"class":"img-fluid",
-			"src":"http://icons-for-free.com/free-icons/png/512/174528.png"
-		})
-	});
-	
-	var div=$("<div/>",{
-		"class":"card mb-3 p-3 shadow row"
-	});
-	
-	//gg.appendTo(url);
-	
-	author.appendTo(divtext);
-	cont.appendTo(divtext);
-	url.appendTo(divtext);
-	date.appendTo(divtext);
-	divimg.appendTo(div);
-	divtext.appendTo(div);
-	div.appendTo("#tweets");
+
+
+	author.appendTo(divbody);
+	cont.appendTo(divbody);
+	url.appendTo(divbody);
+	date.appendTo(divbody);
+	divbody.appendTo(cardT);
+	cardT.appendTo(divtext);
+	img.appendTo(cardI);
+	cardI.appendTo(divimg);
+	divimg.appendTo(divrow);
+	divtext.appendTo(divrow);
+	divrow.appendTo("#tweets");
 }
 
 function cargarXML(buscado){
